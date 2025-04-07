@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🧠 Migraine Prediction</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+  
+  <canvas id="bgCanvas"></canvas>
+
+  <div class="container">
+    <h1>MIGRAINE PREDICTOR</h1>
+    <br>
+
+    <div class="meta">BY TEAM MEMBERS:</div>
+    <div class="team-names">
+      <h4>Aparna J&nbsp;&nbsp;&nbsp;&nbsp;Angeline Jenita A&nbsp;&nbsp;&nbsp;&nbsp;Niranjana G&nbsp;&nbsp;&nbsp;&nbsp;Mystica J</h4>
+    </div>
+
+    <article>
+      <p>
+        Migraines are a devastating neurological condition affecting over 1 billion people globally. They can cause pain, nausea, vomiting and sensory sensitivity which reduce the quality of life. Unfortunately, their unpredictable nature makes timely prevention difficult.
+      </p>
+      <p>
+        Our goal is to create a predictive analytics system that helps users anticipate potential migraine episodes before they occur. By analyzing key data patterns—such as sleep, stress levels, weather changes and more—we aim to empower users with early warnings and actionable insights to avoid triggers and reduce attack frequency.
+      </p>
+    </article>
+    <div class="meta">WORK FLOW</div>
+    <section>
+      <h2>Step 1: Importing Libraries 🧾</h2>
+      <p>
+        We begin by importing all the necessary libraries. These include:
+        <ul>
+          <li><strong>pandas</strong> and <strong>numpy</strong> for data manipulation</li>
+          <li><strong>scikit-learn</strong> for training and evaluating machine learning models</li>
+          <li><strong>imbalanced-learn</strong> for handling class imbalance using oversampling</li>
+          <li>Preprocessing modules like <strong>StandardScaler</strong>, <strong>PolynomialFeatures</strong>, and <strong>PCA</strong></li>
+        </ul>
+      </p>
+    </section>
+
+    <section>
+      <h2>Step 2: Loading and Preprocessing the Dataset 🧪</h2>
+      <p>
+        We created a function <code>load_and_preprocess_data()</code> to automate our data pipeline. Here’s what it does:
+      </p>
+      <ul>
+        <li>Loads the dataset and separates features from the target column, ‘Migraine Severity’</li>
+        <li>Balances the dataset using <strong>Random Oversampling</strong></li>
+        <li>Applies <strong>Polynomial Features</strong> to capture interactions between input variables</li>
+        <li>Uses <strong>StandardScaler</strong> for normalization</li>
+        <li>Applies <strong>PCA</strong> to reduce dimensions while preserving 95% of data variance</li>
+        <li>Splits data into training and testing sets (80-20)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Step 3: Training and Optimizing the Models 🤖</h2>
+      <p>
+        In the <code>train_models()</code> function, we train two regression models:
+      </p>
+      <ul>
+        <li><strong>Random Forest Regressor</strong></li>
+        <li><strong>Gradient Boosting Regressor</strong></li>
+      </ul>
+      <p>
+        Using <strong>GridSearchCV</strong>, we fine-tune each model with cross-validation to find the best hyperparameters. Then, we combine both models using a <strong>Voting Regressor</strong> to improve predictions by averaging their outputs.
+      </p>
+    </section>
+
+    <section>
+      <h2>Step 4: Evaluating Model Performance 📊</h2>
+      <p>
+        The <code>evaluate_models()</code> function calculates:
+      </p>
+      <ul>
+        <li><strong>Mean Absolute Error (MAE)</strong></li>
+        <li><strong>Mean Squared Error (MSE)</strong></li>
+        <li><strong>Root Mean Squared Error (RMSE)</strong></li>
+        <li><strong>R-squared Score (R²)</strong></li>
+      </ul>
+      <p>
+        These metrics help us judge how accurate and reliable our model is when predicting migraine severity.
+      </p>
+    </section>
+
+    
+
+    <section>
+      <h2>Our Experience</h2>
+<p>
+  Developing this project provided a valuable opportunity to apply theoretical knowledge to a practical, real-world problem. Throughout the process, we deepened our understanding of data preprocessing, model selection, and evaluation techniques, while also enhancing our collaboration and problem-solving skills.
+</p>
+<p>
+  One of the most rewarding aspects was learning how each step—from data preparation to model optimization—can significantly impact the overall performance. This experience not only strengthened our technical proficiency but also emphasized the importance of teamwork, adaptability, and attention to detail in building effective data-driven solutions.
+</p>
+
+    </section>
+
+    <br><br>
+
+    <!-- 🔹 Video Section -->
+    <video width="100%" controls>
+      <source src="video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <br>
+<div class="visit-site">
+  <a href="https://aparnajayaraman.github.io/migraine_prediction/" target="_blank">
+    🔗 Visit the Migraine Predictor Website
+  </a>
+  <br> <br>
+  <br>
+  <br>
+ </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

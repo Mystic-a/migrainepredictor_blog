@@ -1,0 +1,135 @@
+/* General layout */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: auto;               /* ← allow scrolling */
+  overflow-x: hidden;         /* ← prevent horizontal scroll */
+  font-family: 'Orbitron', sans-serif;
+  background: black;
+  color: white;
+}
+
+/* Background animation canvas */
+canvas#bgCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Content container */
+.container {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Headings and text */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #81f7ff;
+  text-shadow: 0 0 5px #00ffff88;
+  text-align: center;
+}
+
+h4 {
+  font-size: 1rem;
+  color: #ff4ff8;
+  text-shadow: 0 0 5px #ff4ff8;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.meta {
+  color: #ff4ff8;
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-shadow: 0 0 5px #ff4ff8;
+}
+
+article {
+  line-height: 1.8;
+  font-size: 1rem;
+  animation: slideIn 2s ease;
+  color: #00ffe0;
+  margin-bottom: 2rem; /* Add spacing below article */
+}
+
+/* Animation keyframes */
+@keyframes slideIn {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Style the video */
+.video-section {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
+}
+
+video {
+  width: 100%;
+  max-width: 720px;
+  border: 2px solid #00ffff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #00ffff66;
+}
+section {
+  margin-bottom: 30px;
+  background-color: rgba(255, 255, 255, 0.02);
+  padding: 20px;
+  border-left: 5px solid #66fcf1;
+  border-radius: 10px;
+}
+
+section h2 {
+  color: #66fcf1;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: square;
+  margin-left: 20px;
+  color: #ffffff;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+code {
+  background-color: #1f2833;
+  padding: 2px 6px;
+  border-radius: 5px;
+  font-family: monospace;
+  color: #66fcf1;
+}
+.visit-site {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.visit-site a {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #66fcf1;
+  color: #0b0c10;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.visit-site a:hover {
+  background-color: #45a29e;
+  transform: scale(1.05);
+}
